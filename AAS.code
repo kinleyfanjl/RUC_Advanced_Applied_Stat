@@ -1,3 +1,4 @@
+```
 library(jiebaR)
 library(readxl)
 library('tm')
@@ -199,3 +200,4 @@ cond_data$years = sapply(cond_years, FUN = str_extract,
                    pattern = "\\d+")
 cond_data$years[which(is.na(cond_data$years))] = 0  
 cond_data$years[60] = 3
+```
