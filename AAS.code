@@ -1,15 +1,4 @@
-```
-library(jiebaR)
-library(readxl)
-library('tm')
-library('topicmodels')
-library('NLP')
-
-library('cidian')
-library('stingi')
-library('pbapply')
-library(stringr)
-news = read_excel('news.xlsx')
+```news = read_excel('news.xlsx')
 news_text = news[,12]
 pos = read.csv('pos.txt', stringsAsFactors = F)
 neg = read.csv('neg.txt', stringsAsFactors = F)
@@ -179,25 +168,4 @@ indicator = lapply(news_city_list, function(x){
 
 news$indicator = indicator
 news$topic = assigned_topic
-
-###### Requirments analysis for different cities
-cond = read_excel('admited_condi.xlsx')
-cond_cities = cond$城市
-cond_years = cond$车龄
-cond_dist = cond$行驶里程
-cond_insur = cond$保险
-
-cond_data = data.frame(cond_cities)
-
-cond_dist = sapply(cond_dist, FUN = str_extract, 
-                   pattern = "\\d+")
-cond_data$dist = cond_dist
-cond_data$dist[which(is.na(cond_data$dist))] = 0  
-cond_data$insur = sapply(cond_insur, function(x){sum(
-  strsplit(x, split = '')[[1]] == '险')})
-cond_data$insur[which(is.na(cond_data$insur))] = 0 
-cond_data$years = sapply(cond_years, FUN = str_extract, 
-                   pattern = "\\d+")
-cond_data$years[which(is.na(cond_data$years))] = 0  
-cond_data$years[60] = 3
 ```
