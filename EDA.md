@@ -1,4 +1,4 @@
-``
+```
 ###Manuplating Funciton for in Dataset#####
 combine_fn = function(x,y){
      ind1 = as.numeric(x != 'NA')
