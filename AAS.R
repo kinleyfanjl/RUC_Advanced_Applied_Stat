@@ -14,3 +14,8 @@ library(maps)
 library(mapdata)
 library(maptools)
 
+#########After running all coding files, we fetch the final dataset#########
+
+final_data1 = merge(cond_data1, final_data, by.x = 'cond_cities', by.y = 'cities')
+final_data2 = merge(final_data1, news_plt_data, by.x = 'cond_cities', by.y = 'cities')
+View(final_data2)
