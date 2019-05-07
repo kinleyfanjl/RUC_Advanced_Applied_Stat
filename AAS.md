@@ -2,7 +2,6 @@
 library(jiebaR)
 library(readxl)
 library('tm')
-library('topicmodels')
 library('NLP')
 library('cidian')
 library('stingi')
