@@ -21,6 +21,3 @@ cond_data1 = cond_data %>% filter(cond_cities %in% city_plt)
 cond_data1 = cond_data1[!duplicated(cond_data1$cond_cities),]
 
 
-final_data1 = merge(cond_data1, final_data, by.x = 'cond_cities', by.y = 'cities')
-final_data2 = merge(final_data1, news_plt_data, by.x = 'cond_cities', by.y = 'cities')
-View(final_data2)
