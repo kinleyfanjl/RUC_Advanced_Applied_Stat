@@ -120,9 +120,6 @@ p+ geom_point(data = final_data, alpha = 0.7, aes(colour = No.lice)) + geom_smoo
   labs(title = 'Total Taxis, Monopolization, # of admitted lincenses') +
   scale_color_gradient(low="blue", high="red")
 
-
-cond = read_excel('admited_condi.xlsx')
-news = read_excel('news.xlsx')
 #########对新闻事件数据做一个情感分析，分析正负面情绪######
 
 
