@@ -13,9 +13,4 @@ Have a good day!
 ## Reproducibility
 All data preparation and analyses are reproduced, as well as all Figures in the report.
 
-All workflow information is contained in the MASTER_reproducibility.R script. The general steps are:
-
-* Take exploratory data analysis on the raw data.
-* Conduct data processing/preparation for the analyses.
-* Fit a set of Bayesian models to the preprocessed data via Markov chain Monte Carlo (MCMC) methods
-* Generate all plots in the report.
+All workflow information is contained in the Reproduction.R script. Run the codes following their order.
