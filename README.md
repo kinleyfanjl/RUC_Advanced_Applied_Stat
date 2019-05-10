@@ -13,4 +13,4 @@ Have a good day!
 ## Reproducibility
 All data preparation and analyses are reproduced, as well as all Figures in the report.
 
-All workflow information is contained in the Reproduction.R script. Run the codes following their order.
+All codes are in the 'code' directory, run them as their order in the names.
