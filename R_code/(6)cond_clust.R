@@ -73,5 +73,3 @@ final_data3 = final_data2
 final_data3$city = city_plt
 tapply(final_data3$city, factor(final_data3$cluster), print)
 table(clusters)
-
-ss = data.frame(K = 1:)
