@@ -16,3 +16,5 @@ Have a good day!
 All data preparation and analyses are reproduced, as well as all Figures in the report.
 
 All codes are in the 'code' directory, run them as their order in the names.
+
+I combine them into file 'Reproduce.R'.
