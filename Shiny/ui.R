@@ -1,4 +1,4 @@
-
+## ui.R
 library(shiny)
 
 shinyUI(fluidPage(
@@ -10,15 +10,17 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
     selectInput('type', 'choose a type',
-                choices = c('map', 'curve')),
+                choices = c('map', 'curve', 'words')),
     
     sliderInput("top",
-                  label = "Choose the top cities in map:",
+                  label = "Choose the obs in decreasing order:",
                   min = 1,
-                  max = 30, step = 1, value = 15),
+                  max = 71, step = 1, value = 2),
     
-    numericInput('obs', "# of obs in View:", 10),
-    
+    numericInput('num', "Random # of obs in Datasets:", 10),
+    helpText("Note: Because ggpolygen() in ggplot, which is used to generate 
+             a beautiful map, needs long time for computation. So I didn't put it here, because 
+             it will needs you to wait for a long time." ),
     actionButton("update", "Update View")
     ),
     mainPanel(
@@ -28,7 +30,7 @@ shinyUI(fluidPage(
       plotOutput("map"),
       # Output: Header + table of distribution ----
       h4("View"),
-      tableOutput('view')
+      tableOutput('Random samples')
     )
     
     # Show a plot of the generated distribution
