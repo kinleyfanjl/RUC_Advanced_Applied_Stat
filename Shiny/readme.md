@@ -1,1 +1,1 @@
-This zip fille is the shinyapp I built.
+This directory contains all materials I need for the 'shinyapp' I built.
