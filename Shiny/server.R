@@ -23,14 +23,6 @@ shinyServer(function(input, output) {
     })
     
   
-  # Show the first "n" observations ----
-  # The use of isolate() is necessary because we don't want the table
-  # to update whenever input$obs changes (only when the user clicks
-  # the action button)
-  output$view <- renderTable({
-    head(final_data, n = isolate(input$obs))
-  })
-  
   #####plot about entropy and Monop.######
   output$map <- renderPlot({
     K = input$top
