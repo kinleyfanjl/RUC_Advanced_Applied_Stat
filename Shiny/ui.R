@@ -19,7 +19,7 @@ shinyUI(fluidPage(
     
     numericInput('obs', "# of obs in View:", 10),
     
-    actionButton("update", "Update View"),
+    actionButton("update", "Update View")
     ),
     mainPanel(
       
